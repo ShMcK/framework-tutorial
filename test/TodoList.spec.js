@@ -12,3 +12,9 @@ test('todoList is instance of TodoList', t => {
 test('TodoList is created with list of todos', t => {
 	t.is(todoList.todos !== undefined, true);
 });
+
+test('Todolist has method "add"', t => {
+	const todo = 'wash the dishes';
+	todoList.add(todo);
+	t.deepEqual(todoList.todos, [todo]);
+});
