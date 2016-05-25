@@ -18,3 +18,10 @@ test('Todolist has method "add"', t => {
 	todoList.add(todo);
 	t.deepEqual(todoList.todos, [todo]);
 });
+
+test('todoList has method "remove"', t => {
+	const todo = 'wash the dishes';
+	todoList.add(todo);
+	todoList.remove(todo);
+	t.deepEqual(todoList.todos, []);
+});
