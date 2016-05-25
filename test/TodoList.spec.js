@@ -27,7 +27,13 @@ test('todoList has method "remove"', t => {
 });
 
 test('todoList can be instantiated with list of todos', t => {
-	const todos = ['wash the dishes', 'take garbage out'];
-	let newTodoList = new TodoList(todos[0], todos[1]);
+	const todos = [{
+		title: 'wash the dishes',
+		completed: false
+	}, {
+		title: 'take garbage out',
+		completed: false
+	}];
+	let newTodoList = new TodoList(todos[0].title, todos[1].title);
 	t.deepEqual(newTodoList.todos, todos);
 });
