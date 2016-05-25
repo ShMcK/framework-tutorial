@@ -33,7 +33,7 @@ export default class TodoList {
       this.todos.map((todo) => {
         	return `<li>
             <div class="view">
-              <input class="toggle" type="checkbox" />
+              <input class="toggle" type="checkbox" ${todo.completed ? "checked" : ""} />
               <label>${todo.title}</label>
               <button class="destroy"></button>
             </div>
@@ -52,5 +52,6 @@ export let todoList = new TodoList(
 
 setTimeout(() => {
   todoList.add('another todo');
+  todoList.completed('another todo');
   console.log(todoList.todos);
 }, 3000);
