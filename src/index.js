@@ -1,6 +1,6 @@
 export default class TodoList {
-  constructor() {
-    this.todos = [];
+  constructor(todos) {
+    this.todos = todos || [];
   }
   add(todo) {
     this.todos.push(todo);
