@@ -1,6 +1,8 @@
 export default class TodoList {
-  constructor(...todos) {
-    this.todos = todos || [];
+  constructor(...titles) {
+    this.todos = titles.map(title => {
+      return {title, completed: false};
+    }) || [];
   }
   add(todo) {
     this.todos.push(todo);
