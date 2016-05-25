@@ -28,6 +28,6 @@ test('todoList has method "remove"', t => {
 
 test('todoList can be instantiated with list of todos', t => {
 	const todos = ['wash the dishes', 'take garbage out'];
-	let newTodoList = new TodoList(todos);
+	let newTodoList = new TodoList(todos[0], todos[1]);
 	t.deepEqual(newTodoList.todos, todos);
 });
