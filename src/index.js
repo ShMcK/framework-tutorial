@@ -43,3 +43,8 @@ export let todoList = new TodoList(
   'take out garbage',
   'mow the lawn'
 );
+
+setTimeout(() => {
+  todoList.add('another todo');
+  console.log(todoList.todos);
+}, 3000);
