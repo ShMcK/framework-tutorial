@@ -12,9 +12,11 @@ export default class TodoList {
   }
   add(title) {
     this.todos.push({title, completed: false});
+    this.render();
   }
   remove(title) {
     this.todos = this.todos.filter(x => x.title !== title);
+    this.render();
   }
   completed(title) {
     this.todos = this.todos.map((todo) => {
@@ -22,7 +24,8 @@ export default class TodoList {
 				return Object.assign(todo, {completed: true});
 			}
 			return todo;
-		})
+		});
+    this.render();
   }
   render() {
     // change the inner HTML
