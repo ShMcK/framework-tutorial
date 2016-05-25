@@ -16,7 +16,7 @@ test('TodoList is created with list of todos', t => {
 test('Todolist has method "add"', t => {
 	const todo = 'wash the dishes';
 	todoList.add(todo);
-	t.deepEqual(todoList.todos, [todo]);
+	t.deepEqual(todoList.todos, [{title: todo, completed: false}]);
 });
 
 test('todoList has method "remove"', t => {
