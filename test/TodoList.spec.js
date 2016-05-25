@@ -37,3 +37,10 @@ test('todoList can be instantiated with list of todos', t => {
 	let newTodoList = new TodoList(todos[0].title, todos[1].title);
 	t.deepEqual(newTodoList.todos, todos);
 });
+
+test('todoList has completed method', t => {
+	const todo = 'wash the dishes';
+	let newTodoList = new TodoList(todo);
+	newTodoList.completed(todo);
+	t.deepEqual(newTodoList.todos, [{title: todo, completed: true}]);
+});
