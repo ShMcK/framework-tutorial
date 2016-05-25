@@ -10,6 +10,14 @@ export default class TodoList {
   remove(title) {
     this.todos = this.todos.filter(x => x.title !== title);
   }
+  completed(title) {
+    this.todos = this.todos.map((todo) => {
+			if (todo.title === title) {
+				return Object.assign(todo, {completed: true});
+			}
+			return todo;
+		})
+  }
 }
 
 export let todoList = new TodoList();
