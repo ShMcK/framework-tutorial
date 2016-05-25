@@ -8,3 +8,7 @@ test('create a class', t => {
 test('todoList is instance of TodoList', t => {
 	t.is(todoList instanceof TodoList, true);
 })
+
+test('TodoList is created with list of todos', t => {
+	t.is(todoList.todos !== undefined, true);
+});
