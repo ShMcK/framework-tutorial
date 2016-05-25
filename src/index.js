@@ -4,8 +4,8 @@ export default class TodoList {
       return {title, completed: false};
     }) || [];
   }
-  add(todo) {
-    this.todos.push(todo);
+  add(title) {
+    this.todos.push({title, completed: false});
   }
   remove(todo) {
     this.todos = this.todos.filter(x => x !== todo);
